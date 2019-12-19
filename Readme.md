@@ -1,3 +1,8 @@
+## ETS2 Telemetry SDK 4.0.0 Korean Pack
+
+ETS 텔레메트리 SDK 4.0.0 버전 반영한 한국어 텔레메트리입니다.
+default-carrier-kmh(캐리어 기어 포함)만 한글화 되어 있습니다.
+
 ## ETS2 Telemetry Web Server 3.2.5 + Mobile Dashboard
 
 This is a free Telemetry Web Server for [Euro Truck Simulator 2](http://www.eurotrucksimulator2.com/) and [American Truck Simulator](http://www.americantrucksimulator.com/) written in C# based on WebSockets and REST API. The client side consists of a skinnable HTML5 mobile dashboard application that works in any modern desktop or mobile browser. Android users may also use provided native Android application.   
