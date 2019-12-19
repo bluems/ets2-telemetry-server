@@ -1,0 +1,69 @@
+﻿<div class="dashboard game-connected">
+    <div class="hasJob">
+        <!-- meters -->
+        <!--
+            Attributes:
+            data-min-angle: angle in degress for the arrow for data-min value (0 = vertical, negative = left, positive = right)
+            data-max-angle: angle in degress for the arrow for data-max value (0 = vertical, negative = left, positive = right)
+            data-min: minimal possible value (as in JSON response), you may also use any telemetry property name for dynamic values
+            data-max: maximum possible value (as in JSON response), you may also use any telemetry property name for dynamic values
+            -->
+        <div class="truck-speed" data-type="meter" data-min="0" data-max="140" data-min-angle="-114" data-max-angle="+114"></div>
+        <div class="truck-speedRounded"></div>
+        <div class="truck-engineRpm" data-type="meter" data-min="0" data-max="24" data-min-angle="-97" data-max-angle="+97"></div>
+        <div class="truck-fuel" data-type="meter" data-min="0" data-max="truck.fuelCapacity" data-min-angle="-96" data-max-angle="0"></div>
+        <div class="truck-waterTemperature" data-type="meter" data-min="0" data-max="100" data-min-angle="-96" data-max-angle="0"></div>
+        <div class="truck-airPressure" data-type="meter" data-min="0" data-max="170" data-min-angle="-96" data-max-angle="0"></div>
+        <div class="truck-odometer"></div>
+        <div class="truck-cruiseControlSpeedRounded"></div>
+        <div class="truck-gear"></div>
+        <div class="truck-retarderBrake"></div>
+        <div class="navigation-speedLimit"></div>
+        <div class="truck-fuelAverageConsumption"></div>
+        <!-- indicators -->
+        <div class="truck-blinkerLeftOn"></div>
+        <div class="truck-blinkerRightOn"></div>
+        <div class="truck-cruiseControlOn"></div>
+        <div class="truck-lightsBeamHighOn"></div>
+        <div class="truck-lightsBeamLowOn"></div>
+        <div class="truck-lightsParkingOn"></div>
+        <div class="truck-parkBrakeOn"></div>
+        <div class="truck-airPressureEmergencyOn"></div>
+        <div class="truck-waterTemperatureWarningOn"></div>
+        <div class="truck-fuelWarningOn"></div>
+        <div class="trailer1-attached"></div>
+        <div class="cargo-mass"><span class="ton">t</span></div>
+        <div class="cargo-cargo"></div>
+        <!-- job information -->
+        <table class="_job">
+            <tr>
+                <th>시간 :</th>
+                <td><span class="game-time"></span><span class="statusMessage"></span></td>
+            </tr>
+            <tr>
+                <th>출발지 :</th>
+                <td><span class="hasJob _jobSource"><span class="job-sourceCity"></span> (<span class="job-sourceCompany"></span>)</span></td>
+            </tr>
+            <tr>
+                <th>목적지 :</th>
+                <td><span class="hasJob _jobDestionation"><span class="job-destinationCity"></span> (<span class="job-destinationCompany"></span>)</span></td>
+            </tr>
+            <tr>
+                <th>예정 시간 :</th>
+                <!--<td><span class="job-remainingTime"></span> <span class="_jobIncome">(€<span class="job-income"></span>)</span></td>-->
+                <td><span class="hasJob navigation-estimatedTime"></span><span class="_estimatedCom">, </span><span class="navigation-estimatedDistance"></span></td>
+            </tr>
+            <tr>
+                <th>다음 휴식 시간 : </th>
+                <td><span class="hasJob game-nextRestStopTime"></span></td>
+            </tr>
+            <tr>
+                <th>계약 남은 시간 :</th>
+                <td><span class="hasJob job-remainingTime"></span> <span class="_jobIncome">(€<span class="job-income"></span>)</span></div></td>
+            </tr>
+        </table>
+        <div class="_truckWearInfo">트럭 <br/>손상도: <span class="truck-wearSum"></span></div>
+		<div class="_trailerDamageInfo"> 트레일러 <br/>손상도: <span class="job-trailerDamagePercent"></span></div>
+        <div class="_cargoWearInfo">화물 <br/>손상도: <span class="cargo-damage"></span></div>
+    </div>
+</div>

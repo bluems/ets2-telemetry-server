@@ -1,0 +1,24 @@
+{
+    "comments": [
+        "==============================",
+        "     SKIN CONFIGURATION       ",
+        "==============================",
+
+        "Required properties:",
+
+        "           name: name of the skin (directory name: /skins/name)",
+        "          title: human readable skin title",
+        "         author: author name",
+        "          width: width of the skin in pixels (same as defined in the CSS)",
+        "         height: height of the skin in pixels (same as defined in the CSS)"
+    ],
+
+    "config": {
+        "name": "default-carrier-kmh",
+        "title": "캐리어 기어를 포함한 일반적 대시보드 / KMH",
+        "author": "Funbit / 수정 icaros7, BlueMS",
+        "width": 2048,
+        "height": 1152
+    }    
+
+}
