@@ -7,28 +7,30 @@
             var Strings = (function () {
                 function Strings() {
                 }
-                Strings.dashboardHtmlLoadFailed = 'Failed to load dashboard.html for skin: ';
+                Strings.dashboardHtmlLoadFailed = 'dashboard.html 파일 로딩 실패: ';
 
-                Strings.connecting = 'Connecting...';
-                Strings.connected = 'Connected';
-                Strings.disconnected = 'Disconnected';
-                Strings.enterServerIpMessage = 'Please enter server IP address (aa.bb.cc.dd)';
-                Strings.incorrectServerIpFormat = 'Entered server IP or hostname has incorrect format.';
+                Strings.connecting = '연결중...';
+                Strings.connected = '연결됨';
+                Strings.disconnected = '연결 끊김';
+                Strings.enterServerIpMessage = '서버 IP를 입력해주세요. (aa.bb.cc.dd)';
+                Strings.incorrectServerIpFormat = '올바른 형태의 서버 IP 또는 hostname을 입력하세요.';
 
                 Strings.dayOfTheWeek = [
-                    'Sunday',
-                    'Monday',
-                    'Tuesday',
-                    'Wednesday',
-                    'Thursday',
-                    'Friday',
-                    'Saturday'
+                    '일요일',
+                    '월요일',
+                    '화요일',
+                    '수요일',
+                    '목요일',
+                    '금요일',
+                    '토요일'
                 ];
-                Strings.noTimeLeft = 'Overdue';
-                Strings.disconnectedFromServer = 'Disconnected from server';
-                Strings.couldNotConnectToServer = 'Could not connect to the server';
-                Strings.connectedAndWaitingForDrive = 'Connected, waiting for the drive...';
-                Strings.connectingToServer = 'Connecting to the server...';
+                Strings.noTimeLeft = '시간 초과';
+                Strings.disconnectedFromServer = '서버로부터 연결 끊김';
+                Strings.couldNotConnectToServer = '서버에 연결 할 수 없습니다';
+                Strings.connectedAndWaitingForDrive = '연결됬습니다. 주행을 기다리는 중...';
+                Strings.connectingToServer = '서버에 연결중...';
+                Strings.ownTrailler = '자가 트레일러';
+                Strings.Arrived = '목적지에 도착';
                 return Strings;
             })();
             Telemetry.Strings = Strings;

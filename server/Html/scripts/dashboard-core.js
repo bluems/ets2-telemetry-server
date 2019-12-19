@@ -420,6 +420,8 @@
                     data.game.time = this.timeToReadableString(data.game.time);
                     data.job.deadlineTime = this.timeToReadableString(data.job.deadlineTime);
                     data.job.remainingTime = this.timeDifferenceToReadableString(data.job.remainingTime);
+                    data.game.nextRestStopTime = this.timeDifferenceToReadableStringForNRT(data.game.nextRestStopTime);
+                    data.navigation.estimatedTime = this.timeDifferenceToReadableStringForETA(data.navigation.estimatedTime);
                     return data;
                 };
 
@@ -547,13 +549,49 @@
                         var dys = d.getUTCDate() - 1;
                         var hrs = d.getUTCHours();
                         var mnt = d.getUTCMinutes();
-                        var o = dys > 1 ? dys + ' days ' : (dys != 0 ? dys + ' day ' : '');
+                        var o = dys != 0 ? dys + ' 일 ' : '';
                         if (hrs > 0)
-                            o += hrs > 1 ? hrs + ' hours ' : hrs + ' hour ';
+                            o += hrs + ' 시간 ';
                         if (mnt > 0)
-                            o += mnt > 1 ? mnt + ' minutes' : mnt + ' minute';
+                            o += mnt + ' 분';
                         if (!o)
                             o = Telemetry.Strings.noTimeLeft;
+                        return o;
+                    }
+                    return date;
+                };
+
+                Dashboard.prototype.timeDifferenceToReadableStringForETA = function (date) {
+                    if (this.isIso8601(date)) {
+                        var d = new Date(date);
+                        var dys = d.getUTCDate() - 1;
+                        var hrs = d.getUTCHours();
+                        var mnt = d.getUTCMinutes();
+                        var o = dys != 0 ? dys + ' 일 ' : '';
+                        if (hrs > 0)
+                            o += hrs + ' 시간 ';
+                        if (mnt > 0)
+                            o += mnt + ' 분';
+                        if (!o)
+                        o = Telemetry.Strings.Arrived;
+                        return o;
+                    }
+                    return date;
+                };
+
+                Dashboard.prototype.timeDifferenceToReadableStringForNRT = function (date) {
+                    if (this.isIso8601(date)) {
+                        var d = new Date(date);
+                        var dys = d.getUTCDate() - 1;
+                        var hrs = d.getUTCHours();
+                        var mnt = d.getUTCMinutes();
+                        var o = dys != 0 ? dys + ' 일 ' : '';
+                        if (hrs > 0)
+                            o += hrs + ' 시간 ';
+                        if (mnt > 0)
+                            o += mnt + ' 분';
+                        if (!o)
+                        o = '';
                         return o;
                     }
                     return date;
